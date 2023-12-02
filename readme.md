@@ -1,0 +1,72 @@
+# Java Web 项目开发手册
+
+## 1. 安装 IntelliJ IDEA
+
+- 访问 [JetBrains 官网](https://www.jetbrains.com/idea/download/) 并下载 IntelliJ IDEA。
+- 安装并启动 IntelliJ IDEA，按提示完成初始配置。
+
+破解码
+
+```md5
+NXHAY2OW76-eyJsaWNlbnNlSWQiOiJOWEhBWTJPVzc2IiwibGljZW5zZWVOYW1lIjoiSHVuYW4gSW5zdGl0dXRlIG9mIFNjaWVuY2UgYW5kIFRlY2hub2xvZ3kiLCJhc3NpZ25lZU5hbWUiOiJ6b2xhIGdhcm1zIiwiYXNzaWduZWVFbWFpbCI6InpvbGFfZ2FybXNAaG90bWFpbC5jb20iLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJGb3IgZWR1Y2F0aW9uYWwgdXNlIG9ubHkiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiREIiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJJSSIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNDIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNGIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IkRTIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQQyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkNMIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUkQiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTMCIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSU1YiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTVSIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiRFAiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUERCIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBXUyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU0kiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFBTIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBDV01QIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBHTyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQUEMiLCJwYWlkVXBUbyI6IjIwMjQtMDItMDkiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFJCIiwicGFpZFVwVG8iOiIyMDI0LTAyLTA5IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBTVyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJSUyIsInBhaWRVcFRvIjoiMjAyNC0wMi0wOSIsImV4dGVuZGVkIjp0cnVlfV0sIm1ldGFkYXRhIjoiMDEyMDIzMDIwN0xQQUEwMDkwMDkiLCJoYXNoIjoiNDI1NDk2NzkvMjAxMDIwNTY6LTE5MTk3NjU2NzciLCJncmFjZVBlcmlvZERheXMiOjcsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-jld9RLG5lScm+JPCOjY2bVd6Q+EC9HRx2ZAYKm+ySUHk7VqxJ8yvO+RNcgX/s1HiS1HuAqYgkUqNHXzwFS2TbyaDXw27fZk3F8oCvkdYpItKzMx6IRJ4NNffGGAC5U6culHEAWgNPHpQA3Q6Mw34Cz/19P7syAwTMcy3xCDYWII29+gS9LI9I3/HosfI8qLJSDSGrhOfXtHKKEXIg4QguDU13p897IN5u5CNOhXjAu4oKU+ELWBjeIUBS/fkdrDM56JU5hhKKs3JNJ53VPbWSnP2Uhs/isLP9M1UF6rTgY/reCreWvwEsyG0PVadcvr/lydiKi4+FkX/yZIzVOR4aA==-MIIETDCCAjSgAwIBAgIBDzANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIyMTAxMDE2MDU0NFoXDTI0MTAxMTE2MDU0NFowHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMjEwMTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/W3uCpU5M2y48rUR/3fFR6y4xj1nOm3rIuGp2brELVGzdgK2BezjnDXpAxVDw5657hBkAUMoyByiDs2MgmVi9IcqdAwpk988/Daaajq9xuU1of59jH9eQ9c3BmsEtdA4boN3VpenYKATwmpKYkJKVc07ZKoXL6kSyZuF7Jq7HoQZcclChbF75QJPGbri3cw9vDk/e46kuzfwpGftvl6+vKibpInO6Dv0ocwImDbOutyZC7E+BwpEm1TJZW4XovMBegHhWC04cJvpH1u98xoR94ichw0jKhdppywARe43rGU96163RckIuFmFDQKZV9SMUrwpQFu4Z2D5yTNqnlLRfAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQU5FZqQ4gnVc+inIeZF+o3ID+VhcEwSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBANLG1anEKid4W87vQkqWaQTkRtFKJ2GFtBeMhvLhIyM6Cg3FdQnMZr0qr9mlV0w289pf/+M14J7S7SgsfwxMJvFbw9gZlwHvhBl24N349GuthshGO9P9eKmNPgyTJzTtw6FedXrrHV99nC7spaY84e+DqfHGYOzMJDrg8xHDYLLHk5Q2z5TlrztXMbtLhjPKrc2+ZajFFshgE5eowfkutSYxeX8uA5czFNT1ZxmDwX1KIelbqhh6XkMQFJui8v8Eo396/sN3RAQSfvBd7Syhch2vlaMP4FAB11AlMKO2x/1hoKiHBU3oU3OKRTfoUTfy1uH3T+t03k1Qkr0dqgHLxiv6QU5WrarR9tx/dapqbsSmrYapmJ7S5+ghc4FTWxXJB1cjJRh3X+gwJIHjOVW+5ZVqXTG2s2Jwi2daDt6XYeigxgL2SlQpeL5kvXNCcuSJurJVcRZFYUkzVv85XfDauqGxYqaehPcK2TzmcXOUWPfxQxLJd2TrqSiO+mseqqkNTb3ZDiYS/ZqdQoGYIUwJqXo+EDgqlmuWUhkWwCkyo4rtTZeAj+nP00v3n8JmXtO30Fip+lxpfsVR3tO1hk4Vi2kmVjXyRkW2G7D7WAVt+91ahFoSeRWlKyb4KcvGvwUaa43fWLem2hyI4di2pZdr3fcYJ3xvL5ejL3m14bKsfoOv
+```
+
+## 2. 安装 Java JDK
+
+### 步骤
+
+1. 访问 [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) 或 [OpenJDK](https://openjdk.java.net/install/) 官网，下载并安装。
+2. 设置环境变量：
+   - 打开“系统环境变量”设置（可搜索“编辑系统环境变量”）。
+   - 点击“环境变量” -> “新建”（在“系统变量”区域）。
+   - 变量名: `JAVA_HOME`
+   - 变量值: JDK 的安装路径（例如 `C:\Program Files\Java\jdk-11.0.1`）。
+   - 编辑“Path”变量，添加 `%JAVA_HOME%\bin`。
+
+## 3. 安装 Maven
+
+### 步骤
+
+1. 从 [Apache Maven 官网](https://maven.apache.org/download.cgi) 下载 Maven。
+2. 解压到指定目录（例如 `C:\apache-maven`）。
+
+## 4. 配置 Maven 环境变量
+
+### 步骤
+
+1. 设置 `M2_HOME` 和 `MAVEN_HOME` 环境变量：
+   - 重复打开系统环境变量的步骤。
+   - 新建变量 `M2_HOME` 和 `MAVEN_HOME`，值为 Maven 安装目录。
+   - 编辑“Path”变量，添加 `%M2_HOME%\bin`。
+
+## 5. 创建 Maven 项目
+
+- 在 IntelliJ IDEA 中选择 "Create New Project"，然后选择 "Maven"。
+- 配置项目设置（GroupId、ArtifactId、Java 版本）。
+- 点击 "Finish" 完成项目创建。
+
+## 6. 编写项目代码
+
+- 在 `src/main/java` 下创建包和类。
+- 在 `pom.xml` 中添加所需依赖（如 Spring Boot、Thymeleaf）。
+- 编写控制器、服务等业务逻辑代码。
+
+## 7. 构建和运行项目
+
+- 使用 IntelliJ IDEA 的 "Build" 功能或命令行 `mvn clean install -e` 构建项目。
+- 运行项目（在 IDE 中或使用 `mvn spring-boot:run` 命令）。
+
+## 8. 访问应用
+
+- 在浏览器中访问 `http://localhost:8080` 查看应用。
+
+## 9. Docker 化（可选）
+
+- 创建 `Dockerfile`。
+- 使用 `docker build -t myapp .` 构建 Docker 镜像。
+- 使用 `docker run -p 8080:8080 myapp` 运行 Docker 容器。
+
+## 注意事项
+
+- 安装路径和版本可能根据实际下载有所不同，请相应调整。
+- 环境变量更改后可能需要重新启动命令行工具或 IDE。

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户评论</title>
+</head>
+<body>
+<h1>用户评论</h1>
+<ul>
+    <li th:each="comment : ${comments}" th:text="${comment}"></li>
+</ul>
+</body>
+</html>

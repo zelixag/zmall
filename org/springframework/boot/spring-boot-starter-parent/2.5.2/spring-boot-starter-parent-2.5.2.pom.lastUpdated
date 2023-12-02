@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Nov 30 15:00:05 CST 2023
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1701327380164
+http\://maven.aliyun.com/nexus/content/groups/public/.lastUpdated=1701327605850
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.springframework.boot\:spring-boot-starter-parent\:pom\:2.5.2 from/to central (https\://repo.maven.apache.org/maven2)\: Connect to repo.maven.apache.org\:443 [repo.maven.apache.org/151.101.108.215] failed\: Connect timed out
